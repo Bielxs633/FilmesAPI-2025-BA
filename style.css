@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(182, 44, 44);
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+.galeria{
+    display: columns;
+    columns: 4;
+    max-width: 100%;
+    margin: 0 auto auto;
+   
+  }
+
+.galeria img {
+    width: 100%;
+    padding-block: 4px;
+    margin-top: 20px;
+    border: 5px solid #000000;
+    box-shadow: 2px 2px 50px 1px #000000
+}
+
+#pesquisar{
+    padding: 6px 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+#movies{
+    padding: 6px 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
