@@ -27,7 +27,7 @@ function criarImgFilmes(link){
 
 async function preencherFotosFilmes(){
     const movie = document.getElementById('movies').value
-    //const movie = document.getElementById('movie').value
+s
     const fotosFilmes = await pesquisarFilmes(movie)
     const galeria = document.getElementById('galeria')
 
