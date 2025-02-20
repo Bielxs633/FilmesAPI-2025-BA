@@ -1,41 +1,83 @@
+/* Resetando margens e preenchimentos */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(182, 44, 44);
+/* Estilo geral do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-ul, ol, li{
-    list-style: none;
+/* Estilo da barra superior */
+header {
+    background-color: #8b0000; 
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-.galeria{
-    display: columns;
-    columns: 4;
-    max-width: 100%;
-    margin: 0 auto auto;
-   
-  }
+/* Estilo do input de busca na barra */
+#movies {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+/* Estilo do botão de pesquisa */
+#pesquisar {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #b22222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pesquisar:hover {
+    background-color: #800000; 
+}
+
+/* Ajustando o main para ter um espaço em cima devido à barra fixa */
+main {
+    margin-top: 80px; /* Espaço para a barra */
+}
+
+/* Estilo da galeria de imagens */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
 
 .galeria img {
     width: 100%;
-    padding-block: 4px;
-    margin-top: 20px;
-    border: 5px solid #000000;
-    box-shadow: 2px 2px 50px 1px #000000
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-#pesquisar{
-    padding: 6px 6px;
-    font-size: 14px;
-    outline: none;
-}
-
-#movies{
-    padding: 6px 6px;
-    font-size: 12px;
-    cursor: pointer;
+.galeria img:hover {
+    transform: scale(1.05);
 }
